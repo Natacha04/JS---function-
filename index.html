@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salaire</title>
+    <script>
+        var idSalaire = 2500;
+        var salaireNet = 3000;
+        var congesPayes = 500;
+        var dateNetPayer = '10/05/2023'; 
+        console.log();
+
+        var sal = [idSalaire, salaireNet, congesPayes, dateNetPayer];
+        var sal1 = [1000, 3000, 50, '10/05/2023'];
+        var sal2 = [3500, 4000, 800, '16/06/2024'];
+        var sal3 = [5000, 4500, 900, '19/11/2025'];
+        var listeSalaires = [sal1, sal2, sal3];
+        console.log(listeSalaires);
+
+        // function
+        function salaireMontant(idSalaire, salaireNet, congesPayes, dateNetPayer) {
+            console.log(arguments);
+            if (!isNaN(idSalaire) && !isNaN(salaireNet) && !isNaN(congesPayes) && !isNaN(dateNetPayer)) {
+                var mont = idSalaire * salaireNet * congesPayes, dateNetPayer;
+
+            } else mont = 'Entrez des nombres';
+            return mont;
+        }
+
+        var salaireMontant = function (idSalaire, salaireNet, congesPayes, dateNetPayer) {
+                console.log(arguments);
+                if (!isNaN(idSalaire) && !isNaN(salaireNet) && !isNaN(congesPayes) && !isNaN(dateNetPayer)) {
+                var mont = salaireNet * congesPayes
+
+            } else mont = 'Entrez le salaire';
+            return mont;
+        }
+        
+        var result = salaireMontant(4000, 0.1, listeSalaires[1][1]);
+        var resultTest = salaireMontant(listeSalaires[1][0], listeSalaires[0][0]);
+        console.log('le salaire est : ' + result);
+        var result = salaireMontant(2500, 500, listeSalaires[0][0], listeSalaires[0][2]);
+        console.log('le salaire est de : ' + result + '$');
+        console.log(typeof salaireMontant);
+
+    </script>
+</head>
+<body>
+</body>
+</html>
